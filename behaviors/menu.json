@@ -1,0 +1,38 @@
+{
+    "1": {
+        "name": "AES",
+        "module": "jobs.encryptionClasses.aes",
+        "className": "aes",
+        "menu": {
+            "1":{
+                "name":"AES 256 CBC!!!",
+                "function":"encryptAES256",
+                "fileDir":""
+            }
+        }
+    },
+    "2": {
+        "name": "RSA",
+        "module": "",
+        "className": "samples",
+        "menu": {
+            "1":{
+                "name":"RSA 256 !!!",
+                "function":"sample",
+                "fileDir":"behaviors/Setup/AES_256_CBC.json"
+            }
+        }
+    },
+    "3": {
+        "name": "Hashing",
+        "module": "",
+        "className": "samples",
+        "menu": {
+            "1":{
+                "name":"RSA 256 !!!",
+                "function":"sample",
+                "fileDir":"behaviors/Setup/AES_256_CBC.json"
+            }
+        }
+    }
+}
