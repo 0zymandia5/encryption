@@ -1,19 +1,19 @@
 {
     "1": {
         "name": "AES",
-        "module": "jobs.encryptionClasses.samples",
-        "className": "samples",
+        "module": "jobs.encryptionClasses.aes",
+        "className": "aes",
         "menu": {
             "1":{
                 "name":"AES 256 CBC!!!",
-                "function":"sample",
-                "fileDir":"behaviors/Setup/AES_256_CBC.json"
+                "function":"encryptAES256",
+                "fileDir":""
             }
         }
     },
     "2": {
         "name": "RSA",
-        "module": "jobs.encryptionClasses.samples",
+        "module": "",
         "className": "samples",
         "menu": {
             "1":{
@@ -25,7 +25,7 @@
     },
     "3": {
         "name": "Hashing",
-        "module": "jobs.encryptionClasses.samples",
+        "module": "",
         "className": "samples",
         "menu": {
             "1":{
