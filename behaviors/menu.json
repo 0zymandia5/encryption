@@ -1,13 +1,23 @@
 {
     "1": {
-        "name": "AES",
+        "name": "AES 256",
         "module": "jobs.encryptionClasses.aes",
         "className": "aes",
         "menu": {
             "1":{
-                "name":"AES 256 CBC!!!",
+                "name":"Cipher Block Chaining [CBC]!!!",
                 "function":"encryptAES256",
-                "fileDir":""
+                "fileDir":"behaviors/setup/aes/cbc.json"
+            },
+            "2":{
+                "name":"Electronic CodeBook [ECB]!!!",
+                "function":"encryptAES256",
+                "fileDir":"behaviors/setup/aes/ecb.json"
+            },
+            "3":{
+                "name":"Cipher FeedBack CFB!!!",
+                "function":"encryptAES256",
+                "fileDir":"behaviors/setup/aes/cfb.json"
             }
         }
     },
