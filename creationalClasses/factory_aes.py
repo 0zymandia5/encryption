@@ -6,6 +6,8 @@
 # GH Repository https://github.com/0zymandia5/encryption_with_python
 # -----------------------------------------------------------
 from Cryptodome.Cipher import AES
+from Crypto.Util import Counter
+from Crypto.Random import get_random_bytes
 from abc import abstractmethod
 
 import random
@@ -17,10 +19,14 @@ class aes():
     key = "";
     iv = "";
     mode = "";
+    counter = "";
+    
     modes_aes = {
         "CBC": AES.MODE_CBC,
         "ECB": AES.MODE_ECB,
-        "CFB": AES.MODE_CFB
+        "CFB": AES.MODE_CFB,
+        "OFB": AES.MODE_OFB,
+        "CTR": AES.MODE_CTR
     }
     
     @abstractmethod
@@ -57,6 +63,15 @@ class aes():
         return self.iv
     
     @abstractmethod
+    def setCounter(self):
+        nonce = get_random_bytes(8)
+        self.counter = Counter.new(64, prefix=nonce)
+    
+    @abstractmethod
+    def getCounter(self) -> bytes:
+        return self.counter;
+    
+    @abstractmethod
     def pad (self,data):
         data = ' '*16 + data
         pad = 16 - len(data) % 16
@@ -82,3 +97,21 @@ class aes_CFB(aes):
     #Cipher FeedBack
     def printmode(self):
         print("Running Encryption AES 256 CFB");
+
+class aes_OFB(aes):
+    #Output Feedback
+    def printmode(self):
+        print("Running Encryption AES 256 OFB");
+
+class aes_CTR(aes):
+    #Counter
+    def printmode(self):
+        print("Running Encryption AES 256 CTR");
+    
+    def encrypt(self, data2Encrypt = ""):
+        print("Raw Data: ",data2Encrypt);
+        print("Key: ",self.key);
+        print("Counter: ",str(self.counter));
+        cipher = AES.new(bytes(self.key,"utf-8"), self. mode,counter=self.counter)
+        cipher_text = cipher.encrypt(bytes(self.pad(data2Encrypt),'UTF-8'))
+        print("Data encrypted: ",cipher_text.hex())

@@ -18,6 +18,16 @@
                 "name":"Cipher FeedBack CFB!!!",
                 "function":"encryptAES256",
                 "fileDir":"behaviors/setup/aes/cfb.json"
+            },
+            "4":{
+                "name":"Cipher FeedBack OFB!!!",
+                "function":"encryptAES256",
+                "fileDir":"behaviors/setup/aes/ofb.json"
+            },
+            "5":{
+                "name":"Counter CTR!!!",
+                "function":"encryptAES256",
+                "fileDir":"behaviors/setup/aes/ctr.json"
             }
         }
     },
