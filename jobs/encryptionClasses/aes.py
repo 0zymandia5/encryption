@@ -6,7 +6,7 @@
 # GH Repository https://github.com/0zymandia5/encryption_with_python
 # -----------------------------------------------------------
 
-from creationalClasses.factory_aes import aes_CBC, aes_ECB, aes_CFB
+from creationalClasses.factory_aes import aes_CBC, aes_ECB, aes_CFB, aes_OFB, aes_CTR
 
 class aes:
     """
@@ -21,7 +21,9 @@ class aes:
     modes = {
         "CBC": aes_CBC(),
         "ECB": aes_ECB(),
-        "CFB": aes_CFB()
+        "CFB": aes_CFB(),
+        "OFB": aes_OFB(),
+        "CTR": aes_CTR()
     }
     
     def encryptAES256(self, jsonSetup = {}):
@@ -35,6 +37,7 @@ class aes:
             dynamic_Klass.setMode(mode);
             dynamic_Klass.setKey();
             dynamic_Klass.setIV();
+            dynamic_Klass.setCounter();
             # Encryption Process
             dynamic_Klass.printmode();
             dynamic_Klass.encrypt(data2Encrypt);
