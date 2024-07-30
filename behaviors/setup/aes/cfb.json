@@ -1,0 +1,4 @@
+{
+    "data2Encrypt" : "test data to be encripted",
+    "mode" : "CFB"
+}
