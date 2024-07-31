@@ -12,9 +12,9 @@ class aes:
     """
         AES class for data encryption/decryption
         
-        Attributes:
+        *Attributes:
             modes [dict]\n
-        Methods:
+        *Methods:
             encryptAES256(self, jsonSetup={}): Executes the AES data encryption for AES Mode such as CBC, ECB, CFB, etc.\n
     """
     
