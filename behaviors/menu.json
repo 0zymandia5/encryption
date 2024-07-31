@@ -32,19 +32,34 @@
         }
     },
     "2": {
-        "name": "RSA",
-        "module": "",
-        "className": "samples",
+        "name": "Hashing",
+        "module": "jobs.encryptionClasses.hashing",
+        "className": "hashing",
         "menu": {
             "1":{
-                "name":"RSA 256 !!!",
-                "function":"sample",
-                "fileDir":"behaviors/Setup/AES_256_CBC.json"
+                "name":"SHA-256 !!!",
+                "function":"encryptHashing",
+                "fileDir":"behaviors/setup/hashing/sha_256.json"
+            },
+            "2":{
+                "name":"MD5 !!!",
+                "function":"encryptHashing",
+                "fileDir":"behaviors/setup/hashing/md5.json"
+            },
+            "3":{
+                "name":"SHA-1 !!!",
+                "function":"encryptHashing",
+                "fileDir":"behaviors/setup/hashing/sha_1.json"
+            },
+            "4":{
+                "name":"SHA-512 !!!",
+                "function":"encryptHashing",
+                "fileDir":"behaviors/setup/hashing/sha_512.json"
             }
         }
     },
     "3": {
-        "name": "Hashing",
+        "name": "RSA",
         "module": "",
         "className": "samples",
         "menu": {
